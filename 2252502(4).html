@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homework4</title>
+    <link rel ="stylesheet" href="style.css">
+</head>
+  <style>
+     body {
+        background-color: #0f0505;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        font-size: 30px;
+        margin: 0;
+        padding: 0;
+    }
+      .dog1 {
+        color: #00ffc8;
+        text-align: center;
+        padding: 15px;
+        font-size: 30px;
+    }
+    .dog2 {
+        color: hsl(112, 85%, 29%);
+        text-align: center;
+        padding: 15px;
+        font-size: 30px;
+    }
+    p  {
+       color: #ffffff;
+       font-size: 18px;
+       padding: 0;
+       margin: 0;
+       text-align: calc();
+    }
+     h3 {
+       color: #15b59d;
+       font-size: 18px;
+       padding: 0;
+       margin: 0px;
+       text-align: center;
+     }
+     table {
+  border-collapse: collapse;
+
+  margin: 30px auto;
+  font-family: monospace;
+  font-size: 15px;
+  align-items: center;
+}
+
+th, td {
+  border: 2px solid #116a20;
+  padding: 8px;
+  background-color: #3085a4;
+}
+
+thead {
+  background-color: #762929;
+}
+h2 {
+     color: #ffcc00;
+       text-align: center;
+       font-size: 30px;
+       margin-top: 0%;
+         margin-bottom: 10px;
+}
+    #box{
+      border: #ffcc00 2px solid;
+      width: 80%;
+      margin: auto;
+     width: fit-content;
+      padding: 20px;
+    } 
+
+  </style>
+<body>
+      <h2 class="dog1"> 2025-10-22</h2>
+      <div id="box">
+      <h2  class="dog2">ネットワークの住所IPアドレス</h2>
+       <h2>IPアドレスによる識別</h2>
+        <h3>IPアドレスは異なるネットワーク間の通言において、ルーターやホスト
+        を識別するための住所です。<br>MACアドレスとは異なり、NICにあらかじめ
+        書き込まれてはいません。<br>IPアドレスのようにネットワーク層で制御される
+        アドレスを論理アドレスと言い、このような<br>アドレスはネットワークの状態に
+        合わせて、好きなように設定できます。IPアドレスは32ビットの2進数です。<br>
+        通常、"192.168.14.2のように、ドット(.)を使って4つのブロックに分けて書き表します。<br>
+        このようにすると、人間が見てもわかりやすいからです。この1つのブロックが2進数の8ビット<br>
+        分に相当し、10進数の0~255までを使って表されます。<br></h3>
+       </p>
+        <table>
+             <thead>
+                <th>クラス</th>
+                <th>ネットワーク部</th>
+                <th>ホスト部</th>
+                <th>先頭ビット</th>
+                <th>アドレス範囲</th>
+                <th>サブネットマスク</th>
+                <th>用途</th>
+             </thead>
+             <tbody>
+                <tr>
+                   <td>A</td>
+                   <td>8ビット</td>
+                    <td>24ビット</td>
+                    <td>0</td>
+                    <td>0.0.0.0~127.255.255.255</td>
+                    <td>255.0.0.0</td>
+                    <td>大規模ネットワーク</td>
+                </tr>
+                <tr>
+                   <td>B</td>
+                   <td>16ビット</td>
+                    <td>16ビット</td>
+                    <td>10</td>
+                    <td>128.0.0.0~191.255.255.255</td>
+                    <td>255.255.0.0</td>
+                    <td>中規模ネットワーク</td>
+                </tr>
+                <tr>
+                   <td>C</td>
+                   <td>24ビット</td>
+                   <td>8ビット</td>
+                   <td>110</td>
+                   <td>192.0.0.0~223.255.255.255</td>
+                   <td>255.255.255.0</td>
+                   <td>小規模ネットワーク</td>
+                </tr>
+
+
+             </tbody>
+
+        </table>
+
+        <h2>IPアドレスの識別の基本</h2>
+        <p>IPアドレスは、インターネットやLANなどのネットワークに接続された機器に割り当てられる識別番号です A B.<br>
+•  例:-192.168.0.1 のように、数字とドットで構成される形式(IPv4)や、<br>
+より長い形式(IPv6)があります。<br></p>
+
+<h2>📌 IPアドレスの役割</h2>
+
+<p>•  識別機能：各デバイスを一意に識別し、通信相手を特定します。<br>
+•  ルーティング機能：データが正しい宛先に届くよう、最適な経路を決定します。<br>
+</p>
+  <h2>📌 IPアドレスの構成</h2>
+
+<p>•  ネットワーク部：どのネットワークに属しているかを示す。<br>
+•  ホスト部：そのネットワーク内の個々の機器を識別する。</p><br>
+
+<h2>📌 IPアドレスのクラス分け(IPv4のみ)</h2>
+<p>•  クラスA〜Eに分類され、ネットワークの規模に応じて使い分けられます。<br>
+  ⁠◦  例:-クラスAは大規模ネットワーク向け、クラスCは小規模向け<br>
+</p>
+</div>
+</body>
+</html>

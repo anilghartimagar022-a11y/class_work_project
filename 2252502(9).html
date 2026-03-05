@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homework9</title>
+</head>
+<style>
+       h2 {
+        color: #b07d2c; /* bright blue */
+        font-weight: bold;
+         text-align: center;
+        font-size: 2em;
+        margin-bottom: 10px;
+        overflow: hidden;
+        }
+         h2::after {
+        content: attr(data-text);
+        position: absolute; top:0; left:0;
+        width: 100%; height: 100%;
+        clip-path: polygon(0 0,0% 0,0% 100%,0 100%);
+        animation: reveal 5s forwards ease-out;
+        animation-duration: 4s;
+        
+         }
+         @keyframes reveal {
+        0% {clip-path: polygon(0 0,0% 0,0% 100%,0 100%);}
+        100% {clip-path: polygon(0 0,100% 0,100% 100%,0 100%);}
+        }
+
+         body {
+               background-color: black;
+                align-items: center;
+                text-align:center;
+       
+         }
+
+
+
+</style>
+<body>
+      <h2 data-text="2025-11-26"></h2>
+    
+</body>
+</html>

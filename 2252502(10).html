@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homework9</title>
+</head>
+  <style>
+
+            body {
+                 align-items: center;
+                    background-color:black;
+                    text-align: center;
+                    font-size: 18px;
+            }
+            h2 {
+        color: #b02c96; /* bright blue */
+        font-weight: bold;
+         text-align: center;
+        font-size: 2em;
+        margin-bottom: 10px;
+        
+        overflow: hidden;
+        }
+         h2::after {
+        content: attr(data-text);
+        position: absolute; top:0; left:0;
+        width: 100%; height: 100%;
+        clip-path: polygon(0 0,0% 0,0% 100%,0 100%);
+        animation: reveal 5s forwards ease-out;
+        animation-duration: 4s;
+        
+         }
+         @keyframes reveal {
+        0% {clip-path: polygon(0 0,0% 0,0% 100%,0 100%);}
+        100% {clip-path: polygon(0 0,100% 0,100% 100%,0 100%);}
+        }
+        h3{
+            color:#2c80b0;
+            height:0px;
+        }
+
+        p{
+
+            color:#ffffff;
+            font-size:20px;
+        }
+        #box{
+            border: rgba(91, 167, 16, 0.564) 2px solid;
+            width: fit-content;
+            margin: auto;
+            margin-top: 30px;
+        }
+  </style>
+<body>
+    <h2 data-text="2025-12-03"></h2>
+    <div id="box">
+      <h3>インターネット上の住所ドメイン</h3><br>
+     <p><mark>ドメイン名とは何だろう？</mark><br>
+     ドメイン名は、Webサイトやサーバーの場所を特定するための「住所」です。<br>
+        郵便物を届けるのに住所が必要なように、Webサイトへアクセスするにはドメイン名が必要です</p><br>
+        <mark>IPアドレスとの関係</mark>
+<p>本来コンピュータは「192.168.1.1」のような数字(IPアドレス)で識別されます。しかし人間には覚えにくいため、<br>
+覚えやすい文字列に変換したものがドメイン名です。</p><br>
+<mark>DNSの仕組み</mark>  
+<p>ドメイン名はDNS(Domain Name System)によって、対応するIPアドレスに変換されます。<br>
+これは電話帳のように「名前から番号を探す」仕組みに似ています。</p><br>
+<mark>ドメイン名の種類</mark>
+<p>• gTLD (分野別トップレベルドメイン): .com, .net, .org など<br>
+• ccTLD (国コードトップレベルドメイン): .jp(日本), .us(アメリカ）など<br>
+• 属性型JPドメイン: .co.jp(企業向け), .ac.jp(大学向け)など</p><br>
+  
+ <h3>アドレス変換の仕組み</h3>
+     <mark>アドレス変換とは何だろうか？</mark>
+      <p>アドレス変換とは、ネットワーク上で使われるIPアドレスを別のアドレスに書き換える仕組みのことです。<br>
+        特に「NAT(Network Address Translation)」として知られ、<br>
+        プライベートIPとグローバルIPを相互に変換して通信を可能にします。</p><br>
+  <h3>アドレス変換の基本</h3>
+<mark>IPアドレスはネットワーク上の住所 <br> </mark>
+<p>コンピュータやスマホが通信するときに使う識別番号です。<br>
+	<pre style="color:rgb(194, 194, 67)">◦ グローバルIPアドレス:世界中で通用する住所<br>
+	 ◦ プライベートIPアドレス:家庭や会社のLAN内だけで通用する住所</pre></p>
+<mark>アドレス変換(NAT)の役割 </mark> <br>
+<p>
+プライベートIPを持つ機器がインターネットに接続する際、ルータがそのIPをグローバルIPに変換します。<br>
+これにより、LAN内の複数の機器が1つのグローバルIPを共有して外部と通信できます。</p><br>
+<mark>⚙️ NATの種類</mark>
+<h5 style="color:aqua; font-size:25px;">• SNAT(Source NAT)</h5>  
+<p>送信元IPを変換する方式。LAN内の機器が外部にアクセスするときに使われます。</p><br>
+ <h5 style="color:rgb(68, 255, 0);font-size:25px">• DNAT(Destination NAT)</h5>  
+<p>宛先IPを変換する方式。外部から内部の特定機器へアクセスさせたいときに利用されます。</p>
+<h5 style="color:rgb(255, 174, 0);font-size:25px">• NAPT(Network Address Port Translation)/PAT</h5>  
+<p>IPアドレスだけでなくポート番号も変換する方式。複数の機器が同時に1つのグローバルIPを使えるようにするため、<br>
+    家庭用ルータで一般的に使われています。</p><br>
+     
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel ="stylesheet" href="style.css">
+    <title>homework6</title>
+    
+</head>
+  <style>
+          body {
+              background-color: rgb(18, 19, 19);
+              text-align: center;
+              margin-top: 1em;
+              font-size: 20px;
+              margin-bottom: 2em;
+          }
+          h2 {
+      color: #9cb02c; /* bright blue */
+      font-weight: bold;
+       text-align: center;
+      font-size: 2em;
+      margin-bottom: 10px;
+    
+      overflow: hidden;
+    }
+     h2::after {
+      content: attr(data-text);
+      position: absolute; top:0; left:0;
+      width: 100%; height: 100%;
+      clip-path: polygon(0 0,0% 0,0% 100%,0 100%);
+      animation: reveal 5s forwards ease-out;
+      animation-duration: 4s;
+      
+     }
+     @keyframes reveal {
+      0% {clip-path: polygon(0 0,0% 0,0% 100%,0 100%);}
+      100% {clip-path: polygon(0 0,100% 0,100% 100%,0 100%);}
+    }
+ table {
+  border-collapse: collapse;
+
+  margin:auto;
+  font-family: monospace;
+  align-items: center;
+}
+ol li {
+  list-style: none;
+}
+
+th, td {
+  border: 2px solid #ccc;
+  padding: 8px;
+
+}
+
+th {
+  background-color: #86e11eaf;
+}
+td{
+  background-color: rgb(143, 92, 205);
+}
+h3 {
+      color: rgb(205, 144, 0);
+      font-size: 20px;
+      align-items: center;
+      margin-top: 30px;
+     
+    }
+    ol li::before{
+      content: "🔹 ";
+      color: #00ff99; /* mint green bullet */
+    }
+    #box {
+      border: 2px solid rgba(0, 179, 255, 0.791);
+      width: fit-content;
+      margin: auto;
+      margin-top: 50px;
+    }
+  
+      
+      
+  </style>
+        <h2 data-text="2025-11-05"></h2>
+        <div id="box">
+        <body>
+             <h3>IP アドレスを2進数に変換する</h3>
+             <p>   
+                IPアドレスを4つのオクテットに分割する<br>
+               例:-192.168.10.3 → 192, 168, 10, 3
+              
+                各オクテットを8ビットの2進数に変換する</p>
+                <Ol>
+                 <li>192 → 11000000</li>
+                  <li> 168 → 10101000</li>
+                 <li>10 → 00001010</li>
+                 <li>3→ 00000011</li>
+                </Ol>
+                <mark>表示形式<br></mark>
+
+•  分割形式:-11000000.10101000.00001010.00000011<br>
+•  連結形式(32ビット):11000000101010000000101000000011<br>
+
+<h4><mark>サブネットマスク</mark></h4>
+IPアドレスはサブネットマスクという値とペアになって表現されます。<br>
+この値もIPアドレスと同様に32ビットの2進数で、<br>
+"255.255.255.0"のようにドットを使って、4つのブロックの<br>
+10進数で表します。もともとインターネットの世界には、大規模、<br>
+中規模、小規模と、3種類の大きさのネットワークしかありませんでした。<br>
+その後、この3種類のネットワーク配下に下位(サブ)のネットワークを作って、<br>
+もっと柔軟にネットワークの大きさを決めることができるようにしました.<br>
+このサブのネットワークをサブネットと言います。3種類しかなかったネットワーク<br>
+を分割するために作られたのが、サブネットマスクです。<br>
+<h3>Subnet mask を2進数に変換</h3>
+ <img src="2252502b.jpg"style="width: 500px;height: 300px; border-radius: 20px;"><br>
+          
+<h3>IPアドレスの2進数とSubnet mask の2進数をAND演算する</h3>
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th>項目</th>
+        <th>10進数</th>
+        <th>2進数</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>IPアドレス</td>
+        <td>192.168.10.3</td>
+        <td>11000000.10101000.00001010.00000011</td>
+      </tr>
+      <tr>
+        <td>サブネットマスク</td>
+        <td>255.255.255.0</td>
+        <td>11111111.11111111.11111111.00000000</td>
+      </tr>
+      <tr>
+        <td>AND演算結果</td>
+        <td>192.168.10.0</td>
+        <td>11000000.10101000.00001010.00000000</td>
+      </tr>
+    </tbody>
+  </table>
+ </div><br>
+     <h3>AND演算した2進数結果を10進数に変換</h3>
+     <div>
+      <table>
+  <thead>
+     <tr>
+       <th>オクテット</th>
+        <th>2進数</th>
+        <th>10進数</th>
+     </tr>
+  </thead>
+   <tbody>
+  <tr>
+     <td>第1</td>
+     <td>11000000</td>
+     <td>192</td>
+  </tr>
+   <tr>
+    <td>第2</td>
+    <td>10101000</td>
+    <td>168</td>
+   </tr>
+  <tr>
+      <td>第3</td>
+      <td>00001010</td>
+      <td>10</td>
+  </tr>
+    <tr>
+        <td>第4</td>
+        <td>00000000</td>
+        <td>0</td>
+
+    </tr>
+  </tbody>
+      </table>
+     </div>
+</p>
+      
+    
+</body>
+</html>

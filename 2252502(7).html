@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homework7</title>
+</head>
+  <style>
+
+        body {
+            
+                background-color: black;
+                color: aqua;
+                text-align: center;
+                font-size:8px
+        }
+        h2 {
+      color: #9cb02c; /* bright blue */
+      font-weight: bold;
+      font-size: 40px;
+       text-align: center;
+    
+      overflow: hidden;
+    }
+     h2::after {
+      content: attr(data-text);
+      position: absolute; top:0; left:0;
+      width: 100%; height: 100%;
+      clip-path: polygon(0 0,0% 0,0% 100%,0 100%);
+      animation: reveal 5s forwards ease-out;
+      animation-duration: 4s;
+      
+     }
+     @keyframes reveal {
+      0% {clip-path: polygon(0 0,0% 0,0% 100%,0 100%);}
+      100% {clip-path: polygon(0 0,100% 0,100% 100%,0 100%);}
+    }
+    h1 {
+      color: #ff5733; /* bright blue */
+      font-weight: bold;
+       text-align: center;
+      font-size: 25px;
+      margin-bottom: 10px;
+      
+    }
+    #box{
+      border: #ff006f 2px solid;
+      width: fit-content;
+      margin: auto;
+      margin-top: 50px;
+    }
+    p{
+      color: rgb(232, 228, 225);
+      font-size: 18px;
+    }
+  </style>
+  <h2 data-text="2025-11-12">
+    <div id="box">
+<body>
+    <h1>FFFTPについて</h1>
+    <p>
+        主に日本で広く利用されており、シンプルで使いやすいインターフェースが特徴です 。<br>
+       主な機能:FTP、FTPSプロトコルに対応し、ファイルのアップロード・ダウンロード、<br>
+        ディレクトリの作成・削除、ファイルの同期、キュー管理などが可能です 。<br></p>
+       <p>開発背景:1997年に曽田純氏が開発。2011年に作者の開発は終了しましたが、<br>
+        その後オープンソース化され、有志によって継続的に更新されています 。<br>
+対応環境:Windows Vista以降(32bit/64bit版あり)。最新版はv5.8(2023年5月リリース) 。<br>
+ 利用目的:Webサイト管理、ファイルのアップロード・ダウンロード、バックアップ、同期など。<br></p>
+   <h1>🖥️ FFFTPとMacの関係</h1>
+
+<p>FFFTPはWindows専用ソフトです。<br>
+日本で広く使われていますが、開発当初からWindows環境向けに作られており、<br>
+macOS用のネイティブ版は存在しません。<br>
+Macでは直接インストールして使うことはできません。<br>
+FFFTPはWindowsの仕組みに依存しているため、macOS上ではそのまま動作しません。<br>
+代替手段:MacでFTPクライアントを利用する場合、以下のような代替手段があります。<br>
+  - クロスプラットフォームのFTPクライアントソフト<br>
+  (例: FileZilla、Cyberduckなど)を使用する。<br>
+  <mark>✨ まとめ</mark><br>
+
+FFFTPはWindows専用なので、Macでは直接使えません。<br>
+Macユーザーは仮想環境やBoot Campを使うか、<br>
+CyberduckやTransmitなどのMac向けFTPクライアントを選ぶのが一般的です。<br>
+</p>
+</body>
+</div>
+</html>

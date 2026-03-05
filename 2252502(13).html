@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class-work</title>
+</head>
+<style>
+  body{
+    background-color: black;
+    color:white;
+    text-align:center;
+    
+  }
+  h2{
+   color: #33aa6b; /* bright blue */
+        font-weight: bold;
+         text-align:center;
+         margin-top: 40px;
+         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+         font-size: 40px;
+        
+        overflow: hidden;
+        }
+         h2::after {
+        content: attr(data-text);
+        position: absolute; top:0; left:0;
+        width: 100%; height: 100%;
+        clip-path: polygon(0 0,0% 0,0% 100%,0 100%);
+        animation: reveal 5s forwards ease-out;
+        animation-duration: 4s;
+        
+         }
+         @keyframes reveal {
+        0% {clip-path: polygon(0 0,0% 0,0% 100%,0 100%);}
+        100% {clip-path: polygon(0 0,100% 0,100% 100%,0 100%);}
+        }
+  h3{
+color:darkorange;
+font-weight: 500;
+font-size: 20px;
+
+
+
+  }
+  ul li{
+    list-style: none;
+
+
+  }
+  .topic{
+    border:2px solid white;
+    width: fit-content;
+    margin: auto;
+    margin-top:60px;
+    border-color: darkred;
+    padding: 0px 0px 30px 0px;;
+  }
+</style>
+<body>
+  <div class="topic">
+    <h2 data-text="2026-01-14"></h2>
+    <h3>① インターネットとは何か</h3>
+
+    <p>インターネットとは、世界中のさまざまな情報伝達機器がつながった<br>「ネットワークのネットワーク」である。
+    現在、世界人口の約67％以上、<br>約54億人がインターネットを利用しており、私たちの生活に欠かせない存在となっている。</p>
+
+<h3>② インターネットにつながる機器</h3>
+インターネットはパソコンやスマートフォンだけでなく、<br>
+<ul>
+  <li>タブレット</li>
+  <li>ゲーム機</li>
+  <li>スマートスピーカー</li>
+  <li>テレビなどのネット家電</li>
+  <li>カーナビ（GPS）</li>
+</ul>
+
+など、身の回りの多くの機器が接続されている。<br>
+<h3>③ インターネットでできること</h3>
+
+インターネットを使うことで、<br>
+<ul>
+  <li>動画・音楽・ゲームなどの娯楽</li>
+  <li>SNSやトークアプリでのコミュニケーション</li>
+
+  <li>検索・調べもの</li>
+
+  <li>ネットショッピングや位置情報の確認</li>
+
+など、生活を便利で豊かにする多様なサービスを利用できる。<br>
+<h3>④ IoT機器・ネット家電の特徴</h3>
+
+<p>家庭内では、エアコン・プリンター・ネットワークカメラなどもインターネットにつながっており、<br>
+    これらは**IoT機器（ネット家電）と呼ばれる。<br>
+スマートフォンを使って、外出先から家電操作ができるなど便利な反面、セキュリティ対策が重要である。</p>
+<h3>⑥ 情報セキュリティ対策の基本（最重要）</h3>
+
+被害や事故を防ぐため、次の5つの基本対策を日常的に行うことが大切である。
+<ul>
+  <li>OSやソフトウェアを最新の状態に保つ</li>
+  <li>ウイルス対策ソフトを利用する</li>
+  <li>パスワードの管理・認証を強化する</li>
+  <li>初期設定を見直す</li>
+  <li>最新の脅威や手口を知る</li>
+</ul>
+これらを実践することで、被害にあう可能性を大きく減らせる。
+</div>
+
+</body>
+</html>

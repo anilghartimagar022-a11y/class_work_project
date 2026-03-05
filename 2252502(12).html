@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>homework12</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <style>
+    body{
+      background-color: black;
+      color: white;
+      text-align: center;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      margin-top: 10px;
+      font-size: 16px;
+      font-weight:600;
+    }
+.topic{
+  font-size: 20px;
+  font-weight: 600;
+  color: cyan;
+}
+.sub-topic{
+  font-size: 20px;
+  font-weight: 600;
+  color: yellowgreen;
+
+}
+strong{
+  color:darkorange;
+  font-size: 17px;
+}
+table{
+  display: inline;
+  justify-content: center;
+  align-items: center;
+}
+th,td{
+  border: 2px solid white;
+  padding: 10px;
+}
+th{
+  background-color: darkorange;
+  color: black;
+  font-weight: 700;
+}
+td{
+  background-color: rgb(234, 233, 228);
+  font-weight: 500;
+  color: brown;
+  text-align: left;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+ul li::before{
+  content: " ✖︎ ";
+  color: rgb(26, 255, 0);
+}
+.chapter-6{
+  margin-top: 100px;
+  border: 2px solid white;
+  width: 50%;
+ margin-left: auto;
+ margin-right: auto;
+
+}
+ul li{
+  list-style: none;
+}
+.important{
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: orange;
+  border: 1px solid tomato;
+  background-color: rgb(230, 228, 203);
+}
+.chapter-4{
+  margin-top: 50px;
+  border: 2px solid white;
+  width: 50%;
+ margin-left: auto;
+ margin-right: auto;
+}
+.chapter-name{
+  font-size: 30px;
+  font-weight: 700;
+  color: rgb(246, 67, 67);
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-color: rgb(0, 255, 38);
+  
+
+
+}
+h2 {
+        color: #b02c96; /* bright blue */
+        font-weight: bold;
+         text-align: center;
+        font-size: 2em;
+        margin-bottom: 10px;
+        
+        overflow: hidden;
+        }
+         h2::after {
+        content: attr(data-text);
+        position: absolute; top:0; left:0;
+        width: 100%; height: 100%;
+        clip-path: polygon(0 0,0% 0,0% 100%,0 100%);
+        animation: reveal 5s forwards ease-out;
+        animation-duration: 4s;
+        
+         }
+         @keyframes reveal {
+        0% {clip-path: polygon(0 0,0% 0,0% 100%,0 100%);}
+        100% {clip-path: polygon(0 0,100% 0,100% 100%,0 100%);}
+        }
+        body{
+            background-color: black;
+            text-align: center;
+            color: white;
+          
+        }
+
+
+    
+  </style>
+  <body>
+    <h2 data-text="2025-12-17"></h2>
+    <div class="chapter-4">
+      <h1 class="chapter-name">Chapter-4</h1>
+    <h1>LANからインターネットへの接続</h1>
+    <h3 class="topic">🌐 LAN からインターネットへ 接続する仕組み</h3>
+    <p>
+      LAN 内の PC やスマホがインターネットに接続できるのは、<br />
+      ルーターが LAN と WAN（インターネット）をつなぐ役割をしているからです
+    </p>
+    <h3 class="sub-topic">🏠 1. LAN（ローカルネットワーク）とは</h3>
+    <p>
+      LAN は、家・学校・オフィスなどの限られた範囲のネットワークです。 <br />
+      LAN 内の機器は、スイッチや Wi‑Fi
+      アクセスポイントを通じて互いに通信します。<br />
+      検索結果でも、LAN
+      は「建物やキャンパスなどの小さな範囲でデバイスを接続するネットワーク」と説明されています
+    </p>
+    <h3 class="sub-topic">
+      🔌 2. LAN とインターネットをつなぐのは「ルーター」
+    </h3>
+    <p>
+      LAN の外側には WAN（インターネット） が広がっています。<br />
+      LAN と WAN の境界にあるのが ルーターです。<br />
+      ルーターは次の役割を持ちます：<br />
+      <strong>✔ IP アドレス変換（NAT）</strong><br />
+      LAN 内のプライベート IP（例：192.168.x.x）を、<br />
+      インターネット用のグローバル IP に変換します。<br />
+      <strong>✔ ルーティング</strong><br />
+      LAN → インターネット <br />
+      インターネット → LAN <br />
+      の通信経路を決めます。<br />
+      <strong>✔ DHCP</strong><br />
+      LAN 内の PC に IP アドレスを自動配布します。
+    </p>
+    <h3 class="sub-topic">🌍 3. インターネット接続の流れ（超シンプル版）</h3>
+    <p>
+      ① PC が LAN に接続<br />
+      有線（LAN ケーブル）または Wi‑Fi<br />。 ② ルーターから IP
+      アドレスをもらう（DHCP）<br />
+      ③ PC が外部サイトへアクセス要求<br />
+      例：YouTube を開く<br />
+      ④ ルーターが NAT を使って外へ送る<br />
+      LAN 内のプライベート IP → グローバル IP に変換。<br />
+      ⑤ インターネットからの応答をルーターが受け取る<br />
+      ルーターは NAT テーブルを見て、 <br />
+      どの PC へ返すべきか判断。<br />
+      ⑥ PC にデータが届く<br />
+      YouTube が表示される。<br />
+    </p>
+    <h3 class="sub-topic">🧩 4. LAN → インターネット接続に必要な機器</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>機器</th>
+          <th>役割</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>PC / スマホ</td>
+          <td>LAN に接続してインターネットを利用する端末</td>
+        </tr>
+        <tr>
+          <td>スイッチ</td>
+          <td>LAN 内の複数の機器を有線で接続する</td>
+        </tr>
+        <tr>
+          <td>Wi‑Fi アクセスポイント</td>
+          <td>LAN 内の機器を無線で接続する</td>
+        </tr>
+      </tbody>
+
+      <tbody>
+        <tr>
+          <td>ルーター</td>
+          <td>LAN とインターネットをつなぐ。NAT・DHCP・ルーティングを担当</td>
+        </tr>
+        <tr>
+          <td>モデム</td>
+          <td>ISP（インターネットサービスプロバイダ）と接続するための機器</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 class="sub-topic">🎓 まとめ（覚えるべきポイント）</h3>
+    <ul>
+      <li>LAN は家や学校などの小さなネットワーク</li>
+      <li>インターネットへ出るには ルーターが必須</li>
+      <li>ルーターは NAT・ルーティング・DHCP を担当</li>
+      <li>LAN 内の PC はプライベート IP、外はグローバル IP</li>
+      <li>モデム → ルーター → スイッチ/Wi‑Fi → PC の順で接続</li>
+    </ul>
+    </div>
+    <!-- 158 page chapter-6 -->
+     <div class="chapter-6">
+      <h1 class="chapter-name">Chapter-6</h1>
+     <h1 style="color:brown;">🔥 ファイアウォールとは？</h1>
+     <p>ファイアウォール（Firewall）とは、ネットワークを守るための“防御システム” のことだよ。</p>
+     <p>⇢簡単に言えば、安全なネットワーク（例：自分のPCや大学のネットワーク）と、危険が潜む外部ネットワーク（例：インターネット）との間に置く“門番”。
+外から来る通信、内側から外へ出ていく通信を監視して、  
+許可するか、ブロックするかを判断する仕組み なんだ。</p>
+<h3>🛡️ ファイアウォールの役割</h3>
+<ul>
+  <li>不正アクセスを防ぐ</li>
+  <li>マルウェアや攻撃の侵入を防ぐ</li>
+  <li>許可された通信だけを通す</li>
+  <li>ネットワークの安全性を高める</li>
+</ul>
+<br>
+
+<h3>🧩 種類</h3>
+<table>
+  <thead>
+    <tr>
+      <th>種類</th>
+      <th>説明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ネットワーク型ファイアウォール</td>
+      <td>ルーターや企業ネットワークに設置されるタイプ</td>
+    </tr>
+    <tr>
+      <td>ホスト型ファイアウォール</td>
+      <td>WindowsやMacに入っているPC単体を守るタイプ</td>
+    </tr>
+    <tr>
+      <td>Webアプリケーションファイアウォール（WAF）</td>
+       <td>Webサイトを攻撃から守る専門タイプ</td>
+    </tr>
+  </tbody>
+</table>
+<h3>📦 パケットフィルタリングとは</h3>
+（Packet Filtering）<br>
+<p>パケットフィルタリングは、通信データ（パケット）の“ヘッダ情報”を見て通すかブロックするかを判断する仕組み だよ。
+検索結果でも、</p>
+<h4>• パケットのヘッダ（IPアドレス、ポート番号、プロトコル）をチェックして許可/拒否を決める  
+と説明されている。</h4>
+<h3>🔍 何をチェックする？</h3>
+<p>• 送信元IPアドレス</p>
+<p>• 宛先IPアドレス</p>
+<p>• ポート番号（80, 443 など）</p>
+<p>• プロトコル（TCP, UDP など）</p>
+<h3>🛡️ 特徴</h3>
+<ul>
+  <li>高速（ヘッダだけ見るため処理が軽い）</li>
+  <li>基本的な防御に向いている</li>
+  <li>ただし、パケットの中身（コンテンツ）は見ないため、高度な攻撃は防ぎにくい</li>
+</ul>
+---
+<h3>🌐 URLフィルタリングとは</h3>
+（URL Filtering）
+<p>URLフィルタリングは、アクセスしようとしている Web サイトの URL を基準に、アクセスを許可・拒否する仕組み。
+検索結果では、</p>
+<h4>• URL に基づいてアクセスを制御し、悪意のあるサイトや不適切なサイトをブロックする技術  
+と説明されている。</h4>
+<h3>🔍 何をチェックする？</h3>
+<p>• URL（例：https://example.com/malware）</p>
+<p>• ドメイン名（例：example.com）</p>
+<p>• カテゴリ（例：アダルト、ギャンブル、マルウェアサイトなど）</p>
+• レピュテーション（安全性スコア）
+<h3>🛡️ 特徴</h3>
+<ul>
+  <li>危険なサイトへのアクセスを防ぐ</li>
+  <li>企業・学校のポリシー管理に便利</li>
+  <li>リアルタイムで悪意あるサイトを判定できる</li>
+</ul>
+<div class="important">
+🎯 超シンプルまとめ<br>
+• パケットフィルタリング  <br>
+→ 「IP・ポートで通信を通すか決める門番」<br>
+• URLフィルタリング  <br>
+→ 「危険なWebサイトへのアクセスを止めるフィルター」
+</div>
+
+     </div>
+  </body>
+</html>

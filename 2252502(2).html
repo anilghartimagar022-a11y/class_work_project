@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><meta charset="UTF-8">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>homework2</title></head>
+    <br>
+    <style>
+       body {
+      background-color: #000; /* black background */
+      color: #ffffff; /* default white text */
+      font-family: 'Arial', sans-serif;
+      text-align: left; /* left align all text */
+      padding: 50px;
+      font-size: 20px;
+    }
+    h1 {
+      color: #2c8fb0; /* bright blue */
+      font-weight: bold;
+      font-size: 2em;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    h1::after {
+      content: attr(data-text);
+      position: absolute; top:0; left:0;
+      width: 100%; height: 100%;
+      clip-path: polygon(0 0,0% 0,0% 100%,0 100%);
+      animation: reveal 5s forwards ease-out;
+      animation-duration: 4s;
+      
+     }
+       h2 {
+      color: yellow;
+      align-items: baseline;
+
+
+
+       }
+
+      @keyframes reveal {
+        0% {clip-path: polygon(0 0,0% 0,0% 100%,0 100%);}
+        100% {clip-path: polygon(0 0,100% 0,100% 100%,0 100%);}
+      }
+ .box {
+      margin: auto;
+      border: #95ff00 2px solid;
+      width: fit-content;
+ }
+    </style>
+    <body> 
+                <h1 data-text="2025-10-08"></h1>
+        <div class="box"><h2>2進数と10進数の関係</h2>
+        100という10進数を2進数で表現するど"01100100"で<br>
+す。この値を4桁で区切ると、"0110"と”0100"の2つになり<br>
+ます。最初の"0110"は16進数の6、次の"0100"は16進数<br>
+4です。この2つの数を連結した"64"という値が10進数<br>
+の100を16進数で表現したものとなります。<br>
+         <div align="center">
+<div class="glow-box" align="right">
+    <img src="2252502c.jpg" alt="photo" style="width:300px;height: 300px; border-radius: 15px;"><br>
+</div>
+</div>
+<b>デジタルデータの単位</b><br>
+•<a>ビット</a><br>
+→1ビットは2進数の1桁で、0と1だけを表現できます。<br>
+<br>
+<br>
+•<a>バイト</a><br>
+→1バイトは8ビットです。2進数で00000000から<br>
+11111111まで表現できます。これは10進数で0から255までとなります。<br>
+<br>
+<br>
+
+•<a>オクテット</a><br>
+→1オクテットは1バイトと同じで8ビットです。通の世界ではバイトとともによく使われます。<br>
+<br>
+<br>
+•<a>ワード</a><br>
+→1ワードは4バイトです。つまり32ビットです。<br>
+        </div>
+
+
+
+
+
+
+        
+    </body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homework8</title>
+</head>
+    <style>
+    
+            body {
+                 align-items: center;
+                    background-color:whitesmoke;
+                    color: rgba(64, 175, 5, 0.77);
+                    text-align: center;
+                    font-size: 18px;
+            }
+            h2 {
+        color: #9cb02c; /* bright blue */
+        font-weight: bold;
+         text-align: center;
+        font-size: 2em;
+        margin-bottom: 10px;
+        
+        overflow: hidden;
+        }
+         h2::after {
+        content: attr(data-text);
+        position: absolute; top:0; left:0;
+        width: 100%; height: 100%;
+        clip-path: polygon(0 0,0% 0,0% 100%,0 100%);
+        animation: reveal 5s forwards ease-out;
+        animation-duration: 4s;
+        
+         }
+         @keyframes reveal {
+        0% {clip-path: polygon(0 0,0% 0,0% 100%,0 100%);}
+        100% {clip-path: polygon(0 0,100% 0,100% 100%,0 100%);}
+        }
+        h1 {
+        color: #ff5733; /* bright blue */
+        font-weight: bold;
+         text-align: center;
+        font-size: 25px;
+        margin-bottom: 10px;
+        }
+
+        h3 {
+        
+            color:rgba(191, 22, 126, 0.821);
+            font-size:30px;
+
+        }
+        #box{
+            border: rgb(191, 33, 33) 2px solid;
+            width: fit-content;
+            margin: auto;
+            margin-top: 20px;
+        }
+    </style>
+    <body>
+    <h2 data-text="2025-11-19"></h2>
+    <div id="box">
+  
+<h3>(Local Area Network)を構成する主な要素は、以下の通りです。</h3>
+
+<h1>🖥️ ネットワークデバイス (Network Devices)<br></h1>
+❖これらの機器がデータの送受信とネットワークの管理を行います。<br>
+
+<mark>ルーター (Router):<br></mark>
+
+    ✧異なるネットワーク間(例:自宅LANとインターネット)でデータをやり取りする（ルーティング）ために使われます。<br>
+
+    ✧家庭用ルーターの多くは、ルーター機能の他に、スイッチングハブ機能や無線LANアクセスポイント機能も統合しています。<br>
+
+<mark>スイッチングハブ (Switching Hub / Switch):<br></mark>
+
+    ✧LAN内で複数の機器を接続し、データを受け取り、特定の宛先機器にのみデータを転送する役割を持ちます。<br>
+
+    ✧これにより、ネットワークの効率が向上します。<br>
+
+<mark>無線LANアクセスポイント (Wireless Access Point - AP):<br></mark>
+
+  ✧スマートフォンやノートパソコンなどの無線対応機器をLANに接続するために使用されます。<br>
+
+✧有線ネットワークの信号を無線信号に変換し、機器との間で通信を仲介します。<br>
+
+<mark>NIC (Network Interface Card - ネットワークインターフェースカード):<br></mark>
+
+  ✧パソコンやサーバーなどの機器がネットワークに接続するために必要なインターフェースです。<br>
+
+  ✧有線(Ethernetポート)または無線(Wi-Fi機能)の形で機器に内蔵されています。<br>
+
+<h1>🔌 伝送媒体 (Transmission Media)<br></h1>
+機器間を物理的、または仮想的に接続し、データ信号を伝達する経路です。<br>
+
+<mark>有線接続:<br></mark>
+
+  ✧ツイストペアケーブル (Twisted-Pair Cable / LANケーブル):<br>
+   現在のLANで最も一般的に使用されているケーブルです(例:カテゴリ5e、カテゴリ6など)。<br>
+
+ ✧光ファイバーケーブル (Optical Fiber Cable): 高速かつ長距離の通信が必要な場合に、主にバックボーン（基幹）部分などで使用されます。<br>
+
+<mark>無線接続:<br></mark>
+
+  ✧Wi-Fi (Wireless Fidelity): 電波を利用して機器とアクセスポイント間を接続します。<br>
+
+<h1>💻 端末機器 (End Devices)<br></h1>
+実際にユーザーが利用したり、データを提供したりする機器です。<br>
+
+ <h3>クライアント (Client):<br></h3>
+
+   ✖︎パソコン、スマートフォン、タブレット、プリンターなど、ネットワークサービスを利用する側の機器です。<br>
+
+<h3>サーバー (Server):<br></h3>
+
+  ✖︎ファイル共有、ウェブサイトのホスティング、メールサービスの提供など、ネットワークサービスを提供する側の機器です。<br>
+
+<h1>📜 通信プロトコル (Communication Protocols)<br></h1>
+機器間でデータをやり取りする際の共通のルールです。<br>
+
+ <h4 style="color: blue;font-size:25px;">TCP/IP (Transmission Control Protocol/Internet Protocol):<br></h4>
+
+  ★現代のほとんどのネットワーク(LAN、インターネットを含む)で使用されている、最も重要なプロトコル群です。<br>
+
+★データの送信方法、宛先指定方法(IPアドレス)、接続の信頼性(TCP)などを規定しています。<br>
+
+<h4 style="color: blue;font-size:25px;">Ethernet(イーサネット):</h4>
+
+  ★LANにおける物理層とデータリンク層の標準規格です。データ転送の仕組みやケーブルの仕様などを定めています。<br>
+    
+<h3>LANの色々な繋ぎ方</h3>
+ネットワークでは、繋げる機器の数が増えてくると、色々な繋ぎ方が考えられます。繋ぎ方のことをトポロジーと言います。
+    </div>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homework11</title>
+    </head>
+  <style>
+    h2 {
+        color: #b02c96; /* bright blue */
+        font-weight: bold;
+         text-align: center;
+        font-size: 2em;
+        margin-bottom: 10px;
+        
+        overflow: hidden;
+        }
+         h2::after {
+        content: attr(data-text);
+        position: absolute; top:0; left:0;
+        width: 100%; height: 100%;
+        clip-path: polygon(0 0,0% 0,0% 100%,0 100%);
+        animation: reveal 5s forwards ease-out;
+        animation-duration: 4s;
+        
+         }
+         @keyframes reveal {
+        0% {clip-path: polygon(0 0,0% 0,0% 100%,0 100%);}
+        100% {clip-path: polygon(0 0,100% 0,100% 100%,0 100%);}
+        }
+        body{
+            background-color: black;
+            text-align: center;
+            color: white;
+          
+        }
+        h1{
+            font-size: 40px;
+            padding:auto;
+            color: gold;
+        }
+        p{
+           font-size: 18px;
+           font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+        }
+        table{
+            margin:auto;
+            border-collapse: collapse;
+            margin-top:20px;
+          }
+         th,td{
+            border: 2px solid #ebc1c1;
+            padding: 8px;
+            font-size: 18px;
+
+        }
+        h3{ 
+          color:blueviolet;
+          font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          font-size: 20px;
+          font-weight: 600;
+          
+        }
+        th{
+          background-color: coral;
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+          font-weight: 700;
+        }
+        td{
+          background-color: rgba(136, 189, 135, 0.736);
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+          font-weight: 500;
+        }
+        h1:hover{
+          color:white;
+          transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+        }
+        #box{
+          border: 2px solid tomato;
+          width: fit-content;
+          margin: auto;
+          margin-top: 30px;
+          box-shadow: 20px 12px 12px rgba(255, 99, 71, 0.5);
+       
+        }
+  </style>
+<body>
+      <h2 data-text="2025-12-10"></h2>
+      <div id="box">
+      <h1>PKI</h1>
+      <p>PKI（Public Key Infrastructure、公開鍵基盤）は、<br>
+        公開鍵暗号を安全に運用するための仕組み全体のことです。インターネット上で<br>
+        「相手が本物かどうか」「通信が盗聴・改ざんされていないか」を確認するための基盤技術として使われています。</p>
+        <h3>🔐 PKI の役割</h3>
+        <p>PKI が提供する主なセキュリティ機能は次の4つです：<br>
+        • 暗号化：通信内容を第三者に読まれないようにする<br>
+        • 認証：通信相手が本物であることを証明する<br>
+        • 改ざん検出：データが途中で書き換えられていないことを確認する<br>
+        • 否認防止：電子署名により「確かにその人が送った」ことを証明する</p>
+        <h3>🧩 PKI の構成要素</h3>
+        <p>PKI は複数の要素で成り立っています</p>
+        <table>
+          <thead>
+            <tr>
+              <th>要素</th>
+              <th>役割</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>CA(認証局)</td>
+              <td>デジタル証明書を発行・管理する信頼機関</td>
+            </tr>
+            <tr>
+              <td>RA（登録局）</td>
+              <td>証明書発行前の本人確認を行う</td>
+            </tr>
+            <tr>
+              <td>デジタル証明書</td>
+              <td>公開鍵と所有者情報を結びつけた電子文書</td>
+            </tr>
+            <tr>
+              <td>CRL / OCSP</td>
+              <td>失効した証明書の情報を配布する仕組み</td>
+            </tr>
+            <tr>
+              <td>公開鍵・秘密鍵</td>
+              <td>暗号化・署名に使う鍵のペア</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>🌐 PKI が使われている場面</h3>
+        <p>あなたも日常的に PKI を使っています。代表例は次の通り：<br>
+        • HTTPS / TLS（Webサイトの暗号化）<br>
+        • 電子メールの暗号化（S/MIME）<br>
+        • VPN 接続<br>
+        • コード署名（アプリの正当性確認）<br>
+        • 電子契約・電子署名</p>
+      </div>
+</body>
+</html>

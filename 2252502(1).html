@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>homework1</title>
+    </head>
+    <body>
+  <style>
+    body {
+      background-color: #000; /* black background */
+      color: #ffffff; /* default white text */
+      font-family: 'Arial', sans-serif;
+      text-align: center; /* center all text */
+      padding: 30px;
+    }
+
+    h4 {
+      color: #2c8fb0;
+      font-weight: bold;
+      font-size: 3em;
+      margin-bottom: 20px;
+      overflow: hidden;
+    }
+     h4::after {
+      content: attr(data-text);
+      position: absolute; top:0; left:0;
+      width: 100%; height: 100%;
+      clip-path: polygon(0 0,0% 0,0% 100%,0 100%);
+      animation: reveal 5s forwards ease-out;
+      animation-duration: 4s;
+      
+     }
+
+      @keyframes reveal {
+        0% {clip-path: polygon(0 0,0% 0,0% 100%,0 100%);}
+        100% {clip-path: polygon(0 0,100% 0,100% 100%,0 100%);}
+      }
+    h2 {
+      color: #ffcc00; /* golden yellow */
+      font-weight: bold;
+      font-size: 2.5em;
+      margin-top: 30px;
+    }
+    h3 {
+      color: #ff66cc; /* vibrant pink */
+      font-weight: bold;
+      font-size: 1.9em;
+      margin-top: 25px;
+    }
+
+    p, li {
+      font-weight: bold;
+      color: #e0e0e0; 
+      font-size: 2em;
+    }
+
+    ul li {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li::before {
+      content: " ★ ";
+      color: #00ff99; /* mint green bullet */
+    }
+    .box {
+  width: fit-content;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow:
+    0 4px 6px rgba(0,0,0,0.15),
+    0 8px 12px rgba(0,0,0,0.10),
+    0 12px 18px rgba(0,0,0,0.08);
+      margin: auto;
+      /* border: #00ff99 2px solid; */
+      width: fit-content;
+      background:linear-gradient(to right,rgb(175, 127, 127),rgb(173, 151, 111),rgb(206, 206, 164),rgb(155, 188, 155),rgb(106, 106, 172),rgb(139, 109, 161),violet); 
+     
+
+    }
+  </style>
+<body>
+    <h4 data-text="2025-10-01"></h4>
+    <div class="box">
+    <h2>情報ネットワーク入門 - 第1回ホームページ作成</h2>
+     <p>今日は、ホームページ作成の基本を学びました。<br>
+ホームページ用ファイルの保存場所
+Desktop - 情報ネットワーク入門です<br>
+HTML用のファイル名は、test1001.htmlです。<br>
+改行するとき使うタブは(br)です。<br>
+ホームページ作成のコツは、まずタブの使い方になれること</p>
+<br>
+<h3>【どういうタブがあるかはネット上で調べます。】</h3><br>
+<p>ホームページ作成時使うプログラムは、以下の3点です。<br>
+<ul>
+  <li>visual studio code:-プログラム作成時</li>
+  <li>Explorer:-作成したファイルの保存やファイル名確認</li>
+   <li>web ブラウザ:-表示内容の確認。</li>
+</ul><br>
+<h2>重要:-今週からWEB学習を始めること..</h2>
+<h3 class="cs1">課題1回目</h3><br>
+<p>デジタルデータの単位</p>
+<h2>● ビット</h2>
+<p>1ビットは2進数の1桁で、だけを表現できます。<br></p>
+<h2>● バイト</h2>
+<p>1バイトは8ビットです。2進数では00000000から11111111まで表せます。<br>
+これは10進数で0~255までとなります。<br></p>
+<h2>● オクテット</h2>
+<p>1オクテットは1バイトと同じく8ビットです。<br>
+  通の世界でバイトとともに使われます。<br></p>
+<h2>● ワード</h2>
+<p>1ワードは4バイトです。つまり32ビットです。</p>
+</div>
+
+
+
+
+    </body>
+</html>
